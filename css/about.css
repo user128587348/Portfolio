@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-orange: #ff5500;
+  --primary-red: #d92323;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -46,7 +46,7 @@ nav {
 
 
 nav .logo {
-  color: var(--primary-orange);
+  color: var(--primary-red);
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 20px;
@@ -69,7 +69,7 @@ nav .nav-bar a {
 }
 
 nav .nav-bar a:hover {
-  color: var(--primary-orange);
+  color: var(--primary-red);
 }
 
 
@@ -77,7 +77,7 @@ nav .nav-bar a:hover {
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 400;
-    color: var(--primary-orange);
+    color: var(--primary-red);
 }
 .me{
     font-size: 2.5rem;
@@ -85,6 +85,140 @@ nav .nav-bar a:hover {
     font-weight: 400;
     color: var(--text-white);
 }
+
+/* ==========================================================================
+   ABOUT SUBPAGE COMPONENT SYSTEM
+   ========================================================================== */
+
+/* Structural Container Breakdown */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Minimalist Section Label System */
+.section-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-red);
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+.bio-paragraph {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Right Column Card Deck */
+.about-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.metric-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-glow);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.metric-card:hover {
+  border-color: rgba(var(--primary-red-rgb), 0.4);
+  background: rgba(255, 85, 0, 0.02);
+  transform: translateX(4px); /* Sleek slide-out interact effect */
+}
+
+.card-num {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--primary-red);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.metric-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.metric-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Premium Outlined Button State */
+.about-actions {
+  margin-top: 15px;
+}
+
+.cta-outline {
+  display: inline-block;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--border-glow);
+  padding: 14px 28px;
+  border-radius: 100px;
+  transition: var(--transition-smooth);
+}
+
+.cta-outline:hover {
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+  box-shadow: 0 0 20px rgba(var(--primary-red-rgb), 0.15);
+}
+
+/* Universal Layout Helper Fix */
+.fallback-height {
+  min-height: auto;
+}
+
+/* ==========================================================================
+   ABOUT MEDIA QUERIES (Responsive Stacking Optimization)
+   ========================================================================== */
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-4px); /* Switch horizontal offset to vertical on mobile layout views */
+  }
+}
+
 
 
 ::-webkit-scrollbar {
@@ -96,12 +230,29 @@ nav .nav-bar a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6600;
+  background: var(--primary-red);
   border-radius: 10px;
   border: 2px solid #121212;/
 }
 
 /* 4. Thumb hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: #e65c00;
+  background: var(--primary-red);
+}
+
+/* Custom blinking terminal cursor effect */
+#typing-text::after {
+  content: "|";
+  color: var(--primary-red, #d92323);;
+  margin-left: 2px;
+  display: inline-block;
+  animation: blinkCursor 1s step-end infinite;
+
+  vertical-align: 0.08em;
+  line-height: 1;
+}
+
+@keyframes blinkCursor {
+  from, to { color: transparent }
+  50% { color: var(--brand-orange, #d92323) }
 }

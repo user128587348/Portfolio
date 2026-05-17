@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-orange: #ff5500;
+  --primary-red: #d92323;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -46,7 +46,7 @@ nav {
 
 
 nav .logo {
-  color: var(--primary-orange);
+  color: var(--primary-red);
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 20px;
@@ -69,7 +69,7 @@ nav .nav-bar a {
 }
 
 nav .nav-bar a:hover {
-  color: var(--primary-orange);
+  color: var(--primary-red);
 }
 
 
@@ -77,13 +77,159 @@ nav .nav-bar a:hover {
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 400;
-    color: var(--primary-orange);
+    color: var(--primary-red);
 }
 .me{
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 400;
     color: var(--text-white);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.contact-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Info Channel Cards */
+.direct-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-item span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: var(--transition-smooth);
+}
+
+.info-item a:hover {
+  color: var(--primary-red);
+  transform: translateX(4px);
+}
+
+/* Interactive Input Console Grid Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* Universal Text field overrides */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-glow);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+/* Subtle orange highlight ring when user focuses an input line */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  background: rgba(217, 35, 35, 0.02);
+  box-shadow: 0 0 15px rgba(var(--primary-red-rgb), 0.1);
+}
+
+/* Fixes default system resize dragging to preserve page layout stability */
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Solid Action Dispatcher Button Block */
+.submit-btn {
+  background: var(--brand-orange);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 100px;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  box-shadow: 0 10px 25px rgba(var(--brand-orange-rgb), 0.2);
+  transition: var(--transition-smooth);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(var(--brand-orange-rgb), 0.4);
+}
+
+/* ==========================================================================
+   CONTACT MEDIA QUERIES (Mobile Breakpoint Restructuring)
+   ========================================================================== */
+@media (max-width: 968px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .contact-title {
+    font-size: 2.4rem;
+  }
+  
+  .submit-btn {
+    width: 100%; /* Spans full horizontal bounds cleanly on compact smartphones */
+    text-align: center;
+  }
 }
 
 
@@ -96,12 +242,30 @@ nav .nav-bar a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6600;
+  background: var(--primary-red);
   border-radius: 10px;
   border: 2px solid #121212;/
 }
 
 /* 4. Thumb hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: #e65c00;
+  background: var(--primary-red);
+}
+
+
+/* Custom blinking terminal cursor effect */
+#typing-text::after {
+  content: "|";
+  color: var(--primary-red, #d92323);;
+  margin-left: 2px;
+  display: inline-block;
+  animation: blinkCursor 1s step-end infinite;
+
+  vertical-align: 0.08em;
+  line-height: 1;
+}
+
+@keyframes blinkCursor {
+  from, to { color: transparent }
+  50% { color: var(--primary-red, #d92323) }
 }

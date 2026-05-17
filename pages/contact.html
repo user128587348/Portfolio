@@ -4,24 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact me</title>
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
         <div class="main-wrapper">
         <div class="secondary-wrapper">
             <nav>
-                <div class="logo" >Contact</div>
+                <div id="typing-text" class="logo">Contact.</div>
                 <ul class="nav-bar">
-                    <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="pages/project.html">Projects</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
-                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="../index.html">Portfolio</a></li>
+                    <li><a href="../pages/about.html">About me</a></li>
+                    <li><a href="../pages/project.html">Projects</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                    
                 </ul>
             </nav>
+
+            <div class="contact-container">
+                
+                <!-- Left Details Grid Column -->
+                <div class="contact-info">
+                    <p class="section-tag">01 // Network</p>
+                    <h2 class="contact-title">Let's Build<br>Something <span class="orange">Epic</span></h2>
+                    <p class="contact-subtitle">Have an opening, a freelance pipeline project, or just want to talk software architecture? Drop me a ping.</p>
+                    
+                    <div class="direct-links">
+                        <div class="info-item">
+                            <span>Email Direct</span>
+                            <a href="mailto:aryan.ramharakh@gmail.com">aryan.ramharakh@gmail.com</a>
+                        </div>
+                        <div class="info-item">
+                            <span>Digital Repositories</span>
+                            <a href="https://github.com" target="_blank">://github.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Console Grid Column -->
+                <div class="contact-form-wrapper">
+                    <p class="section-tag">02 // Transmission</p>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="user-name">Your Name</label>
+                            <input type="text" id="user-name" required placeholder="e.g., Jane Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-email">Email Address</label>
+                            <input type="email" id="user-email" required placeholder="name@company.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-msg">Project Intel / Message</label>
+                            <textarea id="user-msg" rows="4" required placeholder="Tell me about your software goals..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Transmission &rarr;</button>
+                    </form>
+                </div>
+
+            </div> <!-- End contact-container -->
         </div>
         </div>
           
 
-            
+            <script src="../js/contact.js"></script>
 </body>
 </html>
