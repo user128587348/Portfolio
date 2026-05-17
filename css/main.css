@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-orange: #ff5500;
+  --primary-orange: #d92323;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -123,21 +123,62 @@ nav .nav-bar a:hover {
 }
 
 
+.skills-section {
+  margin-top: 50px; /* Separates the image/text block above from your tech stack */
+  text-align: center;
+  width: 100%;
+}
+
+.skills-section h3 {
+  font-size: 1.6rem;
+  color: var(--text-white);
+  margin-bottom: 20px;
+}
+
+/* Horizontal pill arrangement wrapper layout */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Enforces horizontal side-by-side display */
+  gap: 15px; /* Spacing between the individual cards */
+  width: 100%;
+}
+
+/* Skill pill background layout definitions */
+.skill-card {
+  background: #1c1c22;
+  border: 1px solid #2d2d35;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: #a0a0a5;
+  transition: all 0.3s ease;
+}
+
+/* Hover accent border highlights */
+.skill-card:hover {
+  border-color: var(--primary-orange);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+    
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: var(--bg-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6600;
+  background: var(--primary-orange);
   border-radius: 10px;
-  border: 2px solid #121212;/
+  border: 2px solid var(--bg-dark);
 }
 
 /* 4. Thumb hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: #e65c00;
+  background: var(--primary-orange);
 }
