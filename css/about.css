@@ -27,7 +27,7 @@ body {
   padding: 20px;
 }
 
-.portfolio-card {
+.secondary-wrapper {
   background-color: var(--card-dark);
   border: 2px solid #222;
   border-radius: 20px;
@@ -41,8 +41,9 @@ nav {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 60px; 
 }
+
 
 nav .logo {
   color: var(--primary-orange);
@@ -57,7 +58,7 @@ nav .nav-bar {
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 30px;
+  gap: 30px; /
 }
 
 nav .nav-bar a {
@@ -72,54 +73,17 @@ nav .nav-bar a:hover {
 }
 
 
-.hero-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+.about {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var(--primary-orange);
 }
-
-.hero-text {
-  flex: 1;
-}
-
-.intro {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-.name {
-  color: var(--text-white);
-  font-size: 1.6rem;
-  font-weight: normal;
-  margin-bottom: 30px;
-}
-
-.role {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-top: 15px;
-}
-
-.orange {
-  color: var(--primary-orange);
-}
-
-/* Rounded Profile Border Styling matching your screenshot design */
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.profile-img {
-  width: 380px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--primary-orange);
+.me{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var(--text-white);
 }
 
 

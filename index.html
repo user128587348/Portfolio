@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Portfolio</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-            }
-            header {
-                background: #333;
-                color: #fff;
-                padding: 1rem;
-                text-align: center;
-            }
-            nav {
-                background: #444;
-                padding: 1rem;
-            }
-            nav a {
-                color: #fff;
-                text-decoration: none;
-                margin: 0 1rem;
-            }
-            main {
-                padding: 2rem;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>My Portfolio</h1>
-        </header>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Welcome to my portfolio.</p>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>My projects will be listed here.</p>
-            </section>
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Get in touch with me.</p>
-            </section>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="portfolio-card">
+            <nav>
+                <div class="logo" >Portfolio</div>
+                <ul class="nav-bar">
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="pages/project.html">Projects</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/">portfolio</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero-container">
+                <div class="hero-text">
+                    <p class="intro">Hi, I am</p>
+                    <h2 class="name" >Aryan Ramharakh</h2>
+                    <p class="intro">I am currently persuing a degree in</p>
+                    <h1 class="role"><span >software</span> <span class="orange">engineering</span></h1>
+                </div>
+
+                <div class="hero-image">
+                    <img src="img/1-1-2025-3-25-04-AM.png" alt="Profile image" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
