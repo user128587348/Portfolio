@@ -90,6 +90,7 @@ nav .nav-bar a:hover {
 .projects-section {
   padding: 80px 40px;
   background-color: #121212;
+  border-radius: 20px;
 }
 
 .section-title {
