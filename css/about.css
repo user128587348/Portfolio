@@ -299,6 +299,7 @@ nav .nav-bar a:hover {
   background: #d92323;
 }
 
+
 #typing-text::after {
   content: "|";
   color: var(--primary-red, #d92323);;
