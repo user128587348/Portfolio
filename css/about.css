@@ -169,12 +169,13 @@ nav .nav-bar a:hover {
 }
 
 .section-tag {
-    color: #ff3333; /* Your primary red */
+    color: var(--primary-red); /* Your primary red */
     font-family: monospace;
     font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 /* Base Card Styling - Unifies all cards */
@@ -194,7 +195,7 @@ nav .nav-bar a:hover {
 
 /* Card Elements */
 .card-number {
-    color: #ff3333;
+    color: var(--primary-red);
     font-family: monospace;
     font-size: 0.9rem;
     display: block;
@@ -217,7 +218,7 @@ nav .nav-bar a:hover {
 
 /* Timeline Customizations */
 .timeline-card {
-    border-left: 3px solid #ff3333; /* Keep your signature red accent line */
+    border-left: 3px solid var(--primary-red); /* Keep your signature red accent line */
 }
 
 .card-header-inline {
@@ -229,7 +230,7 @@ nav .nav-bar a:hover {
 }
 
 .accent-date {
-    color: #ff3333;
+    color: var(--primary-red);
     font-family: monospace;
     font-weight: bold;
     font-size: 0.9rem;
