@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-orange: #d92323;
+  --primary-orange: #e41515;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -186,7 +186,7 @@ nav .nav-bar a:hover {
 /* Custom blinking terminal cursor effect */
 #typing-text::after {
   content: "|";
-  color: var(--brand-orange, #d92323);;
+  color: var(--primary-orange, #e41515);;
   margin-left: 2px;
   display: inline-block;
   animation: blinkCursor 1s step-end infinite;

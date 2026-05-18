@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-red: #d92323;
+  --primary-red: #e41515;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -72,157 +72,211 @@ nav .nav-bar a:hover {
   color: var(--primary-red);
 }
 
-
-.about {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: var(--primary-red);
-}
-.me{
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: var(--text-white);
+.image-swapper-container {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Adjust height to fit your card aesthetic */
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #16161a;
+    border: 1px solid #1d1d21;
 }
 
-/* ==========================================================================
-   ABOUT SUBPAGE COMPONENT SYSTEM
-   ========================================================================== */
-
-/* Structural Container Breakdown */
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: flex-start;
-  margin-top: 20px;
+/* Container framework for a single image */
+.single-image-container {
+    width: 100%;
+    height: 380px; /* Increased height to beautifully accommodate a portrait photo */
+    margin-top: 22px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #16161a;
+    border: 1px solid #1d1d21;
 }
 
-/* Minimalist Section Label System */
-.section-tag {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary-red);
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+/* Photo adjustments for portrait framing */
+.grad-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio intact */
+    object-position: center 15%; /* Intelligently frames upper bodies and faces */
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.about-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+/* Micro-interaction zoom matching the rest of your site */
+.single-image-container:hover .grad-portrait-img {
+    transform: scale(1.03);
 }
 
-.bio-paragraph {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  letter-spacing: 0.2px;
+/* Micro-zoom interactive effect on hover */
+.image-swapper-container:hover .swap-img {
+    transform: scale(1.03);
 }
 
-/* Right Column Card Deck */
-.about-metrics {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* Card Customization for Identity */
+.identity-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: calc(100% - 35px); /* Forces card to visually stretch and align cleanly if inside a grid */
 }
 
-.metric-row {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+/* Make the title match the clean, sharp style */
+.identity-card h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
-.metric-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-glow);
-  border-radius: 16px;
-  padding: 24px;
-  position: relative;
-  transition: var(--transition-smooth);
+/* First paragraph gets slightly higher contrast to draw the eye */
+.identity-card .highlight-text {
+    color: #e4e4e7;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.metric-card:hover {
-  border-color: rgba(var(--primary-red-rgb), 0.4);
-  background: rgba(255, 85, 0, 0.02);
-  transform: translateX(4px); /* Sleek slide-out interact effect */
+/* Sleek subtle divider line inside the card */
+.card-divider {
+    height: 1px;
+    background: linear-gradient(to right, #1d1d21, rgba(29, 29, 33, 0));
+    margin: 4px 0;
 }
 
-.card-num {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: var(--primary-red);
-  display: block;
-  margin-bottom: 8px;
+/* Second paragraph matches standard card text description */
+.identity-card .body-text {
+    color: #9a9a9f;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.metric-card h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--text-primary);
-}
-
-.metric-card p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* Premium Outlined Button State */
-.about-actions {
-  margin-top: 15px;
-}
-
-.cta-outline {
-  display: inline-block;
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: 1px solid var(--border-glow);
-  padding: 14px 28px;
-  border-radius: 100px;
-  transition: var(--transition-smooth);
-}
-
-.cta-outline:hover {
-  border-color: var(--primary-red);
-  color: var(--primary-red);
-  box-shadow: 0 0 20px rgba(var(--primary-red-rgb), 0.15);
-}
-
-/* Universal Layout Helper Fix */
-.fallback-height {
-  min-height: auto;
-}
-
-/* ==========================================================================
-   ABOUT MEDIA QUERIES (Responsive Stacking Optimization)
-   ========================================================================== */
-@media (max-width: 968px) {
-  .about-container {
-    grid-template-columns: 1fr;
+/* Core Layout Container */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-  }
-  
-  .about-title {
-    font-size: 2.2rem;
-  }
-  
-  .metric-card:hover {
-    transform: translateY(-4px); /* Switch horizontal offset to vertical on mobile layout views */
-  }
+    margin-top: 40px;
 }
 
+/* Ensure column elements stack cleanly */
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.section-tag {
+    color: #ff3333; /* Your primary red */
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
 
-::-webkit-scrollbar {
-  width: 10px;
+/* Base Card Styling - Unifies all cards */
+.info-card {
+    background: #111113; /* Deep solid dark gray matching your design */
+    border: 1px solid #1d1d21; /* Ultra-subtle border for crisp definition */
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    border-color: #ff3333; /* Subtle glow effect on hover */
+}
+
+/* Card Elements */
+.card-number {
+    color: #ff3333;
+    font-family: monospace;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.info-card p {
+    color: #9a9a9f;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Timeline Customizations */
+.timeline-card {
+    border-left: 3px solid #ff3333; /* Keep your signature red accent line */
+}
+
+.card-header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.accent-date {
+    color: #ff3333;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.sub-institution {
+    color: #ffffff !important;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    margin-bottom: 12px !important;
+}
+
+/* Project Card & Image Styling */
+.project-card {
+    padding: 0; /* Clear padding to let image bleed to edges */
+    overflow: hidden;
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #1a1a1e;
+    border-bottom: 1px solid #1d1d21;
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image-wrapper img {
+    transform: scale(1.04); /* Smooth micro-zoom when hovering the card */
+}
+
+.project-meta {
+    padding: 24px;
+}
+
+/* Responsive Handling for Tablet/Mobile */
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Stacks vertically into a beautiful single column */
+        gap: 30px;
+    }
 }
 
 ::-webkit-scrollbar-track {
@@ -240,7 +294,6 @@ nav .nav-bar a:hover {
   background: var(--primary-red);
 }
 
-/* Custom blinking terminal cursor effect */
 #typing-text::after {
   content: "|";
   color: var(--primary-red, #d92323);;

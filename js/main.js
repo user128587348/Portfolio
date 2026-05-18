@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const targetElement = document.getElementById("typing-text");
   
   // The phrase to type out. Using HTML allows us to keep your orange color class!
-  const textToType = '<span class="orange">Portfolio.</span>';
+  const textToType = '<span class="orange">Portfolio</span>';
   
   let index = 0;
   let currentOutput = "";

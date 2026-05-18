@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-red: #d92323;
+  --primary-red: #e41515;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -86,6 +86,98 @@ nav .nav-bar a:hover {
     color: var(--text-white);
 }
 
+/* Projects Section Container */
+.projects-section {
+  padding: 80px 40px;
+  background-color: #121212; /* Matches your screenshot background */
+}
+
+.section-title {
+  font-family: 'Courier New', monospace;
+  color: #e41515; /* Updated to your custom red */
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* Responsive CSS Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Individual Project Cards */
+.project-card {
+  background-color: #1a1a1a; /* Slightly lighter gray to pop from background */
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease;
+}
+
+/* Image Hover Zoom Effect */
+.project-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps aspect ratios correct */
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05); /* Smoothly zooms into your art/code */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #e41515; /* Updated card outline flash to custom red */
+}
+
+/* Text Formatting Inside Cards */
+.project-info {
+  padding: 20px;
+}
+
+.project-tag {
+  font-family: 'Courier New', monospace;
+  color: #e41515; /* Updated tag color to custom red */
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.project-info h3 {
+  color: white;
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.project-info p {
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Interactive Text Links */
+.project-link {
+  font-family: 'Courier New', monospace;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #e41515; /* Updated link text hover to custom red */
+  text-decoration: underline;
+}
 
 ::-webkit-scrollbar {
   width: 10px;

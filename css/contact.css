@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0f0f11;
   --card-dark: #16161a;
-  --primary-red: #d92323;
+  --primary-red: #e41515;
   --text-white: #ffffff;
   --text-muted: #a5a5a5;
 }
@@ -72,6 +72,14 @@ nav .nav-bar a:hover {
   color: var(--primary-red);
 }
 
+.section-tag {
+  color: var(--primary-red);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
 
 .about {
     font-size: 2.5rem;
@@ -195,7 +203,7 @@ nav .nav-bar a:hover {
 
 /* Solid Action Dispatcher Button Block */
 .submit-btn {
-  background: var(--brand-orange);
+  background: var(--primary-red);
   color: var(--text-primary);
   border: none;
   border-radius: 100px;
@@ -204,7 +212,7 @@ nav .nav-bar a:hover {
   font-weight: 600;
   cursor: pointer;
   align-self: flex-start;
-  box-shadow: 0 10px 25px rgba(var(--brand-orange-rgb), 0.2);
+  box-shadow: 0 10px 25px rgba(var(--primary-red-rgb), 0.2);
   transition: var(--transition-smooth);
 }
 
@@ -256,7 +264,7 @@ nav .nav-bar a:hover {
 /* Custom blinking terminal cursor effect */
 #typing-text::after {
   content: "|";
-  color: var(--primary-red, #d92323);;
+  color: var(--primary-red);;
   margin-left: 2px;
   display: inline-block;
   animation: blinkCursor 1s step-end infinite;
@@ -267,5 +275,5 @@ nav .nav-bar a:hover {
 
 @keyframes blinkCursor {
   from, to { color: transparent }
-  50% { color: var(--primary-red, #d92323) }
+  50% { color: var(--primary-red, #e41515) }
 }
