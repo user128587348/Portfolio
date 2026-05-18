@@ -219,3 +219,19 @@ nav .nav-bar a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff3333;
 }
+
+#typing-text::after {
+  content: "|";
+  color: var(--brand-orange, #d92323);;
+  margin-left: 2px;
+  display: inline-block;
+  animation: blinkCursor 1s step-end infinite;
+
+  vertical-align: 0.08em;
+  line-height: 1;
+}
+
+@keyframes blinkCursor {
+  from, to { color: transparent }
+  50% { color: var(--brand-orange, #d92323) }
+}
