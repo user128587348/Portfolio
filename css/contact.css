@@ -73,11 +73,14 @@ nav .nav-bar a:hover {
 }
 
 .section-tag {
-  color: var(--primary-red);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+ color: var(--primary-red); /* Your primary red */
+    font-family: monospace;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 600;
+  letter-spacing: 2px;
   margin-bottom: 12px;
 }
 

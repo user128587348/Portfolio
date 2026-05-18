@@ -171,7 +171,7 @@ nav .nav-bar a:hover {
 .section-tag {
     color: var(--primary-red); /* Your primary red */
     font-family: monospace;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -280,19 +280,23 @@ nav .nav-bar a:hover {
     }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
 ::-webkit-scrollbar-track {
   background: #121212;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-red);
+  background: #d92323;
   border-radius: 10px;
   border: 2px solid #121212;/
 }
 
 /* 4. Thumb hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-red);
+  background: #d92323;
 }
 
 #typing-text::after {

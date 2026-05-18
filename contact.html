@@ -43,31 +43,39 @@
                 <!-- Right Form Console Grid Column -->
                 <div class="contact-form-wrapper">
                     <p class="section-tag">02 // Transmission</p>
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value="dc7b52ef-3c30-4e21-b967-d5f806993f97">
+
+                        <input type="hidden" name="subject" value="New Portfolio Contact Submission">
+                        <input type="hidden" name="from_name" value="Your Portfolio Website">
+
                         <div class="form-group">
                             <label for="user-name">Your Name</label>
-                            <input type="text" id="user-name" required placeholder="e.g., Jane Doe">
+                            <input type="text" id="user-name" name="name" required placeholder="e.g., Jane Doe">
                         </div>
 
                         <div class="form-group">
                             <label for="user-email">Email Address</label>
-                            <input type="email" id="user-email" required placeholder="name@company.com">
+                            <input type="email" id="user-email" name="email" required placeholder="name@company.com">
                         </div>
 
                         <div class="form-group">
                             <label for="user-msg">Project Intel / Message</label>
-                            <textarea id="user-msg" rows="4" required placeholder="Tell me about your software goals..."></textarea>
+                            <textarea id="user-msg" name="message" rows="4" required placeholder="Tell me about your software goals..."></textarea>
                         </div>
 
                         <button type="submit" class="submit-btn">Send Transmission &rarr;</button>
                     </form>
                 </div>
 
-            </div> <!-- End contact-container -->
+            </div>
+
+            
         </div>
         </div>
           
 
-            <script src="../js/contact.js"></script>
+            <script src="js/contact.js"></script>
 </body>
 </html>
